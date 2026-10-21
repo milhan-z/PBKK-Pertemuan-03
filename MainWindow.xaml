@@ -1,0 +1,78 @@
+<Window x:Class="Pertemuan_03_Desktop_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kalkulator Sederhana - PBKK C" 
+        Height="520" Width="360"
+        WindowStartupLocation="CenterScreen"
+        Background="#1E1E1E"
+        ResizeMode="CanMinimize">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/> <!-- Title & Identity -->
+            <RowDefinition Height="90"/>   <!-- Display Screen -->
+            <RowDefinition Height="*"/>    <!-- Buttons Grid -->
+        </Grid.RowDefinitions>
+
+        <!-- Header Mahasiswa -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,10">
+            <TextBlock Text="Kalkulator Sederhana PBKK C" FontWeight="SemiBold" FontSize="14" Foreground="#E0E0E0"/>
+            <TextBlock Text="Muhammad Hilman Azhar (5025241264)" FontSize="11" Foreground="#A0A0A0"/>
+        </StackPanel>
+
+        <!-- Display Screen -->
+        <Border Grid.Row="1" Background="#2D2D2D" CornerRadius="6" Padding="12" Margin="0,0,0,12" BorderBrush="#3D3D3D" BorderThickness="1">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock x:Name="txtHistory" Text="" Foreground="#888888" FontSize="13" TextAlignment="Right" Height="20"/>
+                <TextBox x:Name="txtDisplay" Text="0" Foreground="#FFFFFF" Background="Transparent" BorderThickness="0" 
+                         FontSize="32" FontWeight="Bold" TextAlignment="Right" IsReadOnly="True" Focusable="False"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Grid Tombol Kalkulator (5 baris x 4 kolom) -->
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Baris 1: CE, C, Backspace, Bagi -->
+            <Button Grid.Row="0" Grid.Column="0" Content="CE" Margin="3" Background="#383838" Foreground="#FFFFFF" FontSize="16" Click="btnCE_Click"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="C" Margin="3" Background="#383838" Foreground="#E06C75" FontSize="16" FontWeight="Bold" Click="btnClear_Click"/>
+            <Button Grid.Row="0" Grid.Column="2" Content="⌫" Margin="3" Background="#383838" Foreground="#FFFFFF" FontSize="16" Click="btnBackspace_Click"/>
+            <Button Grid.Row="0" Grid.Column="3" Content="÷" Margin="3" Background="#D19A66" Foreground="#FFFFFF" FontSize="20" FontWeight="Bold" Click="btnOperator_Click"/>
+
+            <!-- Baris 2: 7, 8, 9, Kali -->
+            <Button Grid.Row="1" Grid.Column="0" Content="7" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="1" Grid.Column="1" Content="8" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="1" Grid.Column="2" Content="9" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="1" Grid.Column="3" Content="×" Margin="3" Background="#D19A66" Foreground="#FFFFFF" FontSize="20" FontWeight="Bold" Click="btnOperator_Click"/>
+
+            <!-- Baris 3: 4, 5, 6, Kurang -->
+            <Button Grid.Row="2" Grid.Column="0" Content="4" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="2" Grid.Column="1" Content="5" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="2" Grid.Column="2" Content="6" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="2" Grid.Column="3" Content="-" Margin="3" Background="#D19A66" Foreground="#FFFFFF" FontSize="22" FontWeight="Bold" Click="btnOperator_Click"/>
+
+            <!-- Baris 4: 1, 2, 3, Tambah -->
+            <Button Grid.Row="3" Grid.Column="0" Content="1" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="3" Grid.Column="1" Content="2" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="3" Grid.Column="2" Content="3" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="3" Grid.Column="3" Content="+" Margin="3" Background="#D19A66" Foreground="#FFFFFF" FontSize="20" FontWeight="Bold" Click="btnOperator_Click"/>
+
+            <!-- Baris 5: +/-, 0, ., Sama Dengan -->
+            <Button Grid.Row="4" Grid.Column="0" Content="±" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="16" Click="btnNegatif_Click"/>
+            <Button Grid.Row="4" Grid.Column="1" Content="0" Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="18" Click="btnAngka_Click"/>
+            <Button Grid.Row="4" Grid.Column="2" Content="." Margin="3" Background="#4A4A4A" Foreground="#FFFFFF" FontSize="20" Click="btnTitik_Click"/>
+            <Button Grid.Row="4" Grid.Column="3" Content="=" Margin="3" Background="#61AFEF" Foreground="#FFFFFF" FontSize="20" FontWeight="Bold" Click="btnSamaDengan_Click"/>
+        </Grid>
+    </Grid>
+</Window>
