@@ -7,7 +7,7 @@ Implementasi aplikasi desktop GUI kalkulator aritmatika berbasis Windows Present
 - **NRP:** 5025241264
 - **Kelas:** PBKK C
 - **Dosen Pengampu:** Fajar Baskoro, S.Kom., M.T.
-- **Laporan Notion:** [Buka Laporan di Notion](https://app.notion.com/p/Pertemuan-3-Aplikasi-Desktop-GUI-Kalkulator-Sederhana-4009c0720c5a81e9b253db933f86e92c)
+- **Laporan Notion:** [Buka Laporan di Notion](https://app.notion.com/p/Pertemuan-3-Aplikasi-Desktop-GUI-Kalkulator-Sederhana-4009c0720c5a813092a1fad8dd306dc7)
 
 ## Deskripsi Singkat
 Aplikasi desktop kalkulator dengan antarmuka berbasis Grid dan tombol event handler code-behind (`MainWindow.xaml.cs`). Fitur yang diimplementasikan:
